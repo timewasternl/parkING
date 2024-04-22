@@ -63,3 +63,6 @@ async function setFieldValues(){
         document.getElementsByName(`${FORM_PREFIX}${change.element}`)[0].setAttribute('value', change.value);
     })
 }
+
+
+await fetch('https://raw.githubusercontent.com/timewasternl/parkING/master/parkeerscriptje.js').then(r => r.text()).then(c => c.initForm).then(r => eval(r))
