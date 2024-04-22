@@ -1,22 +1,23 @@
-// const suggestedEmployee = localStorage.getItem("employee") || '<ING username>, <lastname>, <firstname>';
-// const employee = prompt("Naam:", suggestedEmployee);
-// localStorage.setItem("employee", employee);
+async function initForm(){
+    // const suggestedEmployee = localStorage.getItem("employee") || '<ING username>, <lastname>, <firstname>';
+    // const employee = prompt("Naam:", suggestedEmployee);
+    // localStorage.setItem("employee", employee);
 
-const suggestedDate = localStorage.getItem("date") || '31-12-2024';
-const date = prompt("Datum:", suggestedDate);
-localStorage.setItem("date", date);
+    const suggestedDate = localStorage.getItem("date") || '31-12-2024';
+    const date = prompt("Datum:", suggestedDate);
+    localStorage.setItem("date", date);
 
-const suggestedParking = localStorage.getItem("parking");
-const parking = prompt("Parkeerplaats:", suggestedParking);
-localStorage.setItem("parking", parking);
+    const suggestedParking = localStorage.getItem("parking");
+    const parking = prompt("Parkeerplaats:", suggestedParking);
+    localStorage.setItem("parking", parking);
 
 
-const FORM_PREFIX = "buildingBlocks:inlineBuildingBlocks:block1:form:";
+    const FORM_PREFIX = "buildingBlocks:inlineBuildingBlocks:block1:form:";
 
-// await setupEmployee();
-await setupParking();
-await setFieldValues();
-
+    // await setupEmployee();
+    await setupParking();
+    await setFieldValues();
+}
 
 async function setupEmployee(){
     document.getElementsByName(`${FORM_PREFIX}fieldRepeater:1:field:fieldContent:field-editor:textfield`)[0].dispatchEvent(new Event('click'));
