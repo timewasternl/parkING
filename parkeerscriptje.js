@@ -4,7 +4,7 @@ const FORM_PREFIX = "buildingBlocks:inlineBuildingBlocks:block1:form:";
 // const employee = prompt("Naam:", suggestedEmployee);
 // localStorage.setItem("employee", employee);
 
-const suggestedDate = localStorage.getItem("date") || '31-12-2024';
+const suggestedDate = localStorage.getItem("date") || new Date(Date.now() + ( 3600 * 1000 * 24)).toLocaleDateString('nl-NL');
 const date = prompt("Datum:", suggestedDate);
 localStorage.setItem("date", date);
 
