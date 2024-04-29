@@ -1,3 +1,5 @@
+const FORM_PREFIX = "buildingBlocks:inlineBuildingBlocks:block1:form:";
+
 async function initForm(){
     // const suggestedEmployee = localStorage.getItem("employee") || '<ING username>, <lastname>, <firstname>';
     // const employee = prompt("Naam:", suggestedEmployee);
@@ -10,9 +12,6 @@ async function initForm(){
     const suggestedParking = localStorage.getItem("parking");
     const parking = prompt("Parkeerplaats:", suggestedParking);
     localStorage.setItem("parking", parking);
-
-
-    const FORM_PREFIX = "buildingBlocks:inlineBuildingBlocks:block1:form:";
 
     // await setupEmployee();
     await setupParking();
@@ -64,5 +63,4 @@ async function setFieldValues(){
     })
 }
 
-
-await fetch('https://raw.githubusercontent.com/timewasternl/parkING/master/parkeerscriptje.js').then(r => r.text()).then(c => c.initForm).then(r => eval(r))
+initForm()
